@@ -1,0 +1,44 @@
+cabal-version:      2.4
+name:               template-haskell-example
+version:            0.1.0.0
+
+-- A short (one-line) description of the package.
+-- synopsis:
+
+-- A longer description of the package.
+-- description:
+
+-- A URL where users can report bugs.
+-- bug-reports:
+
+-- The license under which the package is released.
+-- license:
+author:             Abhishek Singh
+
+-- An email address to which users can send suggestions, bug reports, and patches.
+-- maintainer:
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files: CHANGELOG.md
+
+executable template-haskell-example
+    main-is:            Main.hs
+    other-modules:      THExample
+                 ,      Types
+                 ,      FilterByTH
+                 ,      FilterByClass
+                 ,      FilterByTypes
+    default-extensions: TemplateHaskell
+                      , RecordWildCards
+                      , DuplicateRecordFields
+                      , MultiParamTypeClasses
+                      , FunctionalDependencies
+    build-depends:      base
+                 ,      template-haskell
+                 ,      th-abstraction
+                 ,      syb
+    -- ghc-options:        -Wall -ddump-splices -ddump-to-file
+    hs-source-dirs:     app
+    default-language:   Haskell2010
